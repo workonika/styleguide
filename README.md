@@ -1,18 +1,18 @@
-# Google Style Guides
+# Руководство Google по стилям
 
-Every major open-source project has its own style guide: a set of conventions
-(sometimes arbitrary) about how to write code for that project. It is much
-easier to understand a large codebase when all the code in it is in a consistent
-style.
+Каждый крупный open-source проект имеет собственное руководство по стилям: набор соглашений 
+(иногда произвольный) о том, как писать код для этого проекта. Гораздо легче понять большую кодовую базу, 
+когда весь код в ней написан в едином стиле. 
 
-“Style” covers a lot of ground, from “use camelCase for variable names” to
-“never use global variables” to “never use exceptions.” This project
-([google/styleguide](https://github.com/google/styleguide)) links to the style
-guidelines we use for Google code. If you are modifying a project that
-originated at Google, you may be pointed to this page to see the style guides
-that apply to that project.
+“Стиль” охватывает множество моментов, от “использовать camelCase для имен переменных” к
+“никогда не использовать глобальные переменные” и до “никогда не использовать исключения.” 
+Этот проект (ссылка на оригинал статьи прим.переводчика)
+([google/styleguide](https://github.com/google/styleguide)) ведет к руководящим принципам по стилям,
+которые используются для кода в компании Гугл. Если вы модифицируете проект, который инициирован в Гугл,
+возможно вам укажут на данную страницу, чтобы ознакомиться с руководством по стилю, который применяется
+в данном проекте.
 
-This project holds the following style guides:
+Данный проект содержит следующие руководства по стилям:
 
 *   [AngularJS Style Guide][angular]
 *   [Common Lisp Style Guide][cl]
