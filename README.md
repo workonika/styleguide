@@ -47,6 +47,9 @@
 
 За небольшими исключениями, эти гиды по стилям являются копиями внутренних 
 гидов по стилям Google, которые помогают разработчикам работать над собственными open source проектами Гугл.
+Изменения вначале делаются во внутренних гидах по стилям и со временем копируются сюда.
+**Внешние изменения не принимаются**
+Пул-реквесты регулярно закрываются без комментариев. Вопросы, 
 Changes to the style guides are made to the internal style guides
 first and eventually copied into the versions found here. **External
 contributions are not accepted.** Pull requests are regularly closed without
