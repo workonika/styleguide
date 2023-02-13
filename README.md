@@ -30,28 +30,24 @@
 *   [TypeScript Style Guide][ts]
 *   [Vimscript Style Guide][vim]
 
-This project also contains [cpplint][cpplint], a tool to assist with style guide
-compliance, and [google-c-style.el][emacs], an Emacs settings file for Google
-style.
+Этот проект также включает [cpplint][cpplint] - инструмент, чтобы помочь с руководством по стлию, 
+и [google-c-style.el][emacs], файл настроек Emacs для стилей Гугл.
 
-If your project requires that you create a new XML document format, the
-[XML Document Format Style Guide][xml] may be helpful. In addition to actual
-style rules, it also contains advice on designing your own vs. adapting an
-existing format, on XML instance document formatting, and on elements vs.
-attributes.
+Если ваш проект требует, чтобы вы создавали XML, вам может быть полезен
+[XML Document Format Style Guide][xml]. В дополнеие к действующим правилам стилей он также включает советы по разработке своих собственных, в противоположность подгонке под существующий формат XML.
 
-The style guides in this project are licensed under the CC-By 3.0 License, which
-encourages you to share these documents. See
-[https://creativecommons.org/licenses/by/3.0/][ccl] for more details.
+Гид по стилям в этом проекте лицензирован под лицензией CC-By 3.0 License, которая
+призывает вас делиться этими документами. Смотрите
+[https://creativecommons.org/licenses/by/3.0/][ccl] для больших деталей.
 
-The following Google style guide lives outside of this project:
+Следующий Google гид по стилям существует отдельно от этого проекта:
 [Effective Dart][dart].
 
-## Contributing
+## Сотрудничество и вклад
 
-With few exceptions, these style guides are copies of Google's internal style
-guides to assist developers working on Google owned and originated open source
-projects. Changes to the style guides are made to the internal style guides
+За небольшими исключениями, эти гиды по стилям являются копиями внутренних 
+гидов по стилям Google, которые помогают разработчикам работать над собственными open source проектами Гугл.
+Changes to the style guides are made to the internal style guides
 first and eventually copied into the versions found here. **External
 contributions are not accepted.** Pull requests are regularly closed without
 comment. Issues that raise questions, justify changes on technical merits, or
