@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Google TypeScript Style Guide</title>
 <link rel="stylesheet" href="javaguide.css">
+<base href="https://www.google.com/" />
 <script src="include/styleguide.js"></script>
 <link rel="shortcut icon" href="https://www.google.com/favicon.ico">
 <script src="include/jsguide.js"></script>
@@ -30,15 +31,15 @@
 
 <h3 id="identifiers">Идентификаторы</h3>
 
-<p>Identifiers <em>must</em> use only ASCII letters, digits, underscores (for constants
-and structured test method names), and the '\(' sign. Thus each valid identifier
-name is matched by the regular expression `[\)\w]+`.</p>
+<p>Идентификаторы <em>должны</em> использовать только ASCII буквы, цифры, символ подчеркивания (для констант 
+и структурированных имен тестовых методов), и символ '\('. Так, каждое корректное имя идентификатора совпадет 
+  с регулярным выражением `[\)\w]+`.</p>
 
 <table>
 <thead>
 <tr>
-<th>Style</th>
-<th>Category</th>
+<th>Стиль</th>
+<th>Категория</th>
 </tr>
 </thead>
 
@@ -46,70 +47,69 @@ name is matched by the regular expression `[\)\w]+`.</p>
 <tr>
 <td><code>UpperCamelCase</code>
 </td>
-<td>class / interface / type / enum / decorator / type
-parameters</td>
+<td>class / interface / type / enum / decorator / типы параметров</td>
 </tr>
 <tr>
 <td><code>lowerCamelCase</code>
 </td>
-<td>variable / parameter / function / method / property /
-module alias</td>
+<td>переменная / параметр / функция / метод / свойство /
+псевдоним (alias) модуля</td>
 </tr>
 <tr>
 <td><code>CONSTANT_CASE</code>
 </td>
-<td>global constant values, including enum values. See
-<a href="#identifiers-constants">Constants</a> below.</td>
+<td>Значения глобальных констант, включая значения enum. Смотри
+<a href="#identifiers-constants">Константы</a> внизу.</td>
 </tr>
 <tr>
 <td><code>#ident</code></td>
-<td>private identifiers are never used.</td>
+<td>приватные идентификаторы более не используются.</td>
 </tr>
 </tbody>
 </table>
 
-<h4 id="identifiers-abbreviations">Abbreviations</h4>
+<h4 id="identifiers-abbreviations">Сокращения</h4>
 
 <p>
-Treat abbreviations like acronyms in names as whole words, i.e. use
-<code>loadHttpUrl</code>, not <del><code>loadHTTPURL</code></del>, unless required by a platform name (e.g.
+Рассмотрим сокращения наподобие акронимов (<dfn>Акроним - [< гр. akros высокий + onyma имя] выражение (слово), образованное от начальных букв (напр., «СНГ», «»).</dfn>) 
+  
+  в именах таких как целые слова, к примеру использование
+<code>loadHttpUrl</code>, не <del><code>loadHTTPURL</code></del>, если только этого не требует название платформы (к примеру
 <code>XMLHttpRequest</code>).</p>
 
-<h4 id="identifiers-dollar-sign">Dollar sign</h4>
+<h4 id="identifiers-dollar-sign">Символ доллара</h4>
 
-<p>Identifiers <em>should not</em> generally use <code>$</code>, except when aligning with naming
-conventions for third party frameworks. <a href="#naming-style">See below</a> for more on
-using <code>$</code> with <code>Observable</code> values.</p>
+<p>Идентификаторам <em>не следует</em> основное использование <code>$</code>, за исключением случаев согласования с
+соглашениями об именовании для сторонних фреймворков. <a href="#naming-style">Смотри внизу</a> для большего использования
+  <code>$</code> с <code>Observable</code> значениями.</p>
 
-<h4 id="identifiers-type-parameters">Type parameters</h4>
+<h4 id="identifiers-type-parameters">Параметры типа</h4>
 
-<p>Type parameters, like in <code>Array&lt;T&gt;</code>, <em>may</em> use a single upper case character
-(<code>T</code>) or <code>UpperCamelCase</code>.</p>
+<p>Тип параметров, наподобие как в Type parameters, like in <code>Array&lt;T&gt;</code>, <em>может</em> использовать одиночный символ в врехнем регистре
+(<code>T</code>) или <code>UpperCamelCase</code>.</p>
 
-<h4 id="identifiers-test-names">Test names</h4>
+<h4 id="identifiers-test-names">Имена тестов</h4>
 
-<p>Test method names in Closure <code>testSuite</code>s and similar xUnit-style test
-frameworks <em>may</em> be structured with <code>_</code> separators, e.g. <code>testX_whenY_doesZ()</code>.</p>
+<p>Имена тестовых методов в Closure <code>testSuite</code>s и подобные xUnit-style тест
+фреймворки <em>могут</em> быть структурированы с разделителем <code>_</code> например <code>testX_whenY_doesZ()</code>.</p>
 
-<h4 id="identifiers-underscore-prefix-suffix"><code>_</code> prefix/suffix</h4>
+<h4 id="identifiers-underscore-prefix-suffix"><code>_</code> приставка/суффикс</h4>
 
-<p>Identifiers must not use <code>_</code> as a prefix or suffix.</p>
+<p>Идентификаторы не должны использоват <code>_</code> как приставку или суффикс.</p>
 
-<p>This also means that <code>_</code> <em>must not</em> be used as an identifier by itself (e.g. to
-indicate a parameter is unused).</p>
+<p>Это также значит, что <code>_</code> <em>не должен</em> быть использован как идентификатор сам по себе (к примеру, чтобы указывать, что параметр не используется)</p>
 
 <blockquote>
-<p>Tip: If you only need some of the elements from an array (or TypeScript
-tuple), you can insert extra commas in a destructuring statement to ignore
-in-between elements:</p>
+<p>Совет: Если вам нужны некоторые элементы из массива (или TypeScript кортежа), 
+  вы можете вставить дополнительные запятые в деструктурирующее выражение, чтобы проигнорировать элементы между:</p>
 
 <pre><code class="language-ts">const [a, , b] = [1, 5, 10];  // a &lt;- 1, b &lt;- 10
 </code></pre>
 </blockquote>
 
-<h4 id="identifiers-imports">Imports</h4>
+<h4 id="identifiers-imports">Импорты</h4>
 
-<p>Module namespace imports are <code>lowerCamelCase</code> while files are <code>snake_case</code>,
+<p>Пространство имен модуля Module namespace imports are <code>lowerCamelCase</code> while files are <code>snake_case</code>,
 which means that imports correctly will not match in casing style, such as</p>
 
 <pre><code class="language-ts good">import * as fooBar from './foo_bar';
