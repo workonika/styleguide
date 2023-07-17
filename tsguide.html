@@ -158,15 +158,14 @@
 
 <h4 id="aliases">Алиасы</h4>
 
-<p>When creating a local-scope alias of an existing symbol, use the format of the
-existing identifier. The local alias <em>must</em> match the existing naming and format
-of the source. For variables use <code>const</code> for your local aliases, and for class
-fields use the <code>readonly</code> attribute.</p>
+<p>Когда создается локальная область видимости алиас для существующего символа использует формат существующего идентификатора. 
+  When creating a local-scope alias of an existing symbol, use the format of the
+existing identifier. Локальный алиса <em>должен</em> совпадать с существующим именем и форматом источника.
+  Для переменных используйте <code>const</code> для ваших локальных алиасов и для полей классов используйте атрибут <code>readonly</code>.</p>
 
 <blockquote>
-<p>Note: If you're creating an alias just to expose it to a template in your
-framework of choice, remember to also apply the proper
-<a href="#properties-used-outside-of-class-lexical-scope">access modifiers</a>.</p>
+<p>Заметка: Если вы создаёте алиас просто, чтобы выставить его в шаблон в вашем фреймворке, помните также, чтобы применять правильный 
+<a href="#properties-used-outside-of-class-lexical-scope">модификатор доступа</a>.</p>
 </blockquote>
 
 <pre><code class="language-ts good">const {Foo} = SomeType;
@@ -178,20 +177,18 @@ class Teapot {
 }
 </code></pre>
 
-<h4 id="naming-style">Naming style</h4>
+<h4 id="naming-style">Стиль именования</h4>
 
-<p>TypeScript expresses information in types, so names <em>should not</em> be decorated
-with information that is included in the type. (See also
+<p>TypeScript выражает информацию в типах, так, что именам expresses information in types, so names <em>не следует</em> быть декорированными сведениями, которая включена в их типе.
+  (См. также
 <a href="https://testing.googleblog.com/2017/10/code-health-identifiernamingpostforworl.html">Testing Blog</a>
- for more about what
-not to include.)</p>
+ для большей информации, что НЕ включать.)</p>
 
-<p>Some concrete examples of this rule:</p>
+<p>Некоторые конкретные примеры этого правила:</p>
 
 <ul>
-<li>Do not use trailing or leading underscores for private properties or
-methods.</li>
-<li>Do not use the <code>opt_</code> prefix for optional parameters.
+<li>Не используйте замыкающий или ведущий символы подчеркивания для приватных (частных) свойств или методов.</li>
+<li>Не используйте <code>opt_</code> приставку для необязательных параметров.
 <ul>
 <li>For accessors, see <a href="#getters-and-setters-accessors">accessor rules</a>
 below.</li>
