@@ -149,16 +149,14 @@
 }
 </code></pre>
 
-<p><strong>Global</strong>: Only symbols declared on the module level, static fields of module
-level classes, and values of module level enums, <em>may</em> use <code>CONST_CASE</code>. If a
-value can be instantiated more than once over the lifetime of the program (e.g.
-a local variable declared within a function, or a static field on a class nested
-in a function) then it <em>must</em> use <code>lowerCamelCase</code>.</p>
+<p><strong>Глобальные</strong>: Только символы объявленные на уровне модуля, статические поля модуля уровня класса,
+  и значения enums уровня модуля, <em>могут</em> использовать <code>CONST_CASE</code>. Если значение может быть переопределено
+  более одного раза в течение жизни программы, (как например, локальная переменная функции, или статическое поле класса вложенного в функцию) 
+  тогда она <em>должна</em> использовать <code>lowerCamelCase</code>.</p>
 
-<p>If a value is an arrow function that implements an interface, then it <em>may</em> be
-declared <code>lowerCamelCase</code>.</p>
+<p>Если значением является стрелочная функция, которая реализует интерфейс, тогда она <em>может</em> быть объявлена в <code>lowerCamelCase</code>.</p>
 
-<h4 id="aliases">Aliases</h4>
+<h4 id="aliases">Алиасы</h4>
 
 <p>When creating a local-scope alias of an existing symbol, use the format of the
 existing identifier. The local alias <em>must</em> match the existing naming and format
