@@ -190,45 +190,45 @@ class Teapot {
 <li>Не используйте замыкающий или ведущий символы подчеркивания для приватных (частных) свойств или методов.</li>
 <li>Не используйте <code>opt_</code> приставку для необязательных параметров.
 <ul>
-<li>For accessors, see <a href="#getters-and-setters-accessors">accessor rules</a>
-below.</li>
+<li>Для модификаторов доступа (get, set), смотри <a href="#getters-and-setters-accessors">правила для модификаторов доступа</a>
+внизу.</li>
 </ul></li>
-<li>Do not mark interfaces specially (<del><code>IMyInterface</code></del> or
-<del><code>MyFooInterface</code></del>) unless it's idiomatic in its
-environment. When
-introducing an interface for a class, give it a name that expresses why the
-interface exists in the first place (e.g. <code>class TodoItem</code> and <code>interface
-TodoItemStorage</code> if the interface expresses the format used for
-storage/serialization in JSON).</li>
-<li>Suffixing <code>Observable</code>s with <code>$</code> is a common external convention and can
-help resolve confusion regarding observable values vs concrete values.
-Judgement on whether this is a useful convention is left up to individual
-teams, but <em>should</em> be consistent within projects.</li>
+<li>Не помечайте интерфейсы особенно (<del><code>IMyInterface</code></del> или
+<del><code>MyFooInterface</code></del>) если это не идиоматически в его окружении. Когда When
+представляется интерфейс для класса, дайте ему имя, которое выражает почему интерфейс существует на первом месте
+  (к примеру <code>class TodoItem</code> и <code>interface
+TodoItemStorage</code> если интерфейс выражает формат используемый для хранения/сериализации в JSON).</li>
+<li>Приставляя <code>Observable</code>s с <code>$</code> является общепринятым внешним соглашением и может
+помочь разрешить замештальство относительно наблюдаемых значений против конкретных значений. 
+Суждение в отношении того, что является ли это соглашение полезным остается на усмотрение команд,
+но <em>должен</em> быть одинаковым по всему проекту.</li>
 </ul>
 
-<h4 id="descriptive-names">Descriptive names</h4>
+<h4 id="descriptive-names">Описательные имена</h4>
 
-<p>Names <em>must</em> be descriptive and clear to a new reader. Do not use abbreviations
-that are ambiguous or unfamiliar to readers outside your project, and do not
-abbreviate by deleting letters within a word.</p>
+<p>Имена <em>должны</em> быть описательными и понятными для новых ознакамливающихся (читателей). Не используйте 
+  аббревиатуры (аббревиатура — сокращенное слово или словосочетание)
+которые являются двусмысленными или незнакомыми читателю вне вашего проекта и не сокращайте удаляя буквы внутри слова.
+</p>
 
 <ul>
-<li><strong>Exception</strong>: Variables that are in scope for 10 lines or fewer, including
-arguments that are <em>not</em> part of an exported API, <em>may</em> use short (e.g.
-single letter) variable names.</li>
+<li><strong>Исключения</strong>: Переменные, которые в области видимости 10 строк или менее, включая Variables that are in scope for 10 lines or fewer, including
+аргументы, которые <em>не</em> являются частью экспортируемого API, <em>могут</em> 
+  (к примеру одиночная буква) имена переменных.</li>
 </ul>
 
-<h3 id="file-encoding-utf-8">File encoding: UTF-8</h3>
+<h3 id="file-encoding-utf-8">Кодирование файла: UTF-8</h3>
 
-<p>For non-ASCII characters, use the actual Unicode character (e.g. <code>∞</code>). For
-non-printable characters, the equivalent hex or Unicode escapes (e.g. <code>\u221e</code>)
-can be used along with an explanatory comment.</p>
+<p>Для не-ASCII символов используйте действительные символы Unicode (к примеру <code>∞</code>). 
+  Для непечатаемых символов, эквивалент шестнадцатеричных или Unicode эскейп-последовательностей
+  (к примеру <code>\u221e</code>)
+может быть использована вместе с пояснительным комментарием.</p>
 
-<pre><code class="language-ts good">// Perfectly clear, even without a comment.
+<pre><code class="language-ts good">// Абсолютно очевидно, даже без комментария.
 const units = 'μs';
 
-// Use escapes for non-printable characters.
-const output = '\ufeff' + content;  // byte order mark
+// Используйте эксейп-последовательности для непечатаемых символов.
+const output = '\ufeff' + content;  // метка порядка байтов
 </code></pre>
 
 <pre><code class="language-ts bad">// Hard to read and prone to mistakes, even with the comment.
