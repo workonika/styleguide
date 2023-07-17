@@ -109,38 +109,36 @@
 
 <h4 id="identifiers-imports">Импорты</h4>
 
-<p>Пространство имен модуля Module namespace imports are <code>lowerCamelCase</code> while files are <code>snake_case</code>,
-which means that imports correctly will not match in casing style, such as</p>
+<p>Пространство имен модуля Module начинаются в нижнем регистре <code>lowerCamelCase</code> а файлы в змеиной нотации <code>snake_case</code>,
+что означает, что они не будут пересекаться по стилю написания, как например</p>
 
 <pre><code class="language-ts good">import * as fooBar from './foo_bar';
 </code></pre>
 
-<p>Some libraries might commonly use a namespace import prefix that violates this
-naming scheme, but overbearingly common open source use makes the violating
-style more readable. The only libraries that currently fall under this exception
-are:</p>
+<p>Некоторые библиотеки, в основном, могут использовать пространство имен префикса импорта, 
+  который нарушает эту схему именования, но чрезмерно распространенное использование открытого исходного кода делает нарушающий
+стиль более читабельным. Но есть и исключения, как например:</p>
 
 <ul>
 <li><a href="https://jquery.com/">jquery</a>, using the <code>$</code> prefix</li>
 <li><a href="https://threejs.org/">threejs</a>, using the <code>THREE</code> prefix</li>
 </ul>
 
-<h4 id="identifiers-constants">Constants</h4>
+<h4 id="identifiers-constants">Константы</h4>
 
-<p><strong>Immutable</strong>: <code>CONSTANT_CASE</code> indicates that a value is <em>intended</em> to not be
-changed, and <em>may</em> be used for values that can technically be modified (i.e.
-values that are not deeply frozen) to indicate to users that they must not be
-modified.</p>
+<p><strong>Неизменяемые</strong>: <code>CONSTANT_CASE</code> указывает, что значение является indicates that a value is <em>не предназначено</em> 
+  чтобы его изменяли, и <em>может</em> быть использовано для значений, 
+  которые технически могут быть изменены (к примеру если к объекту не применили метод Object.frozen), но указывает, что изменению не подлежит.</p>
 
 <pre><code class="language-ts good">const UNIT_SUFFIXES = {
   'milliseconds': 'ms',
   'seconds': 's',
 };
-// Even though per the rules of JavaScript UNIT_SUFFIXES is
-// mutable, the uppercase shows users to not modify it.
+// Даже несмотря на то, что правила JavaScript являются изменяемыми в отношении переменных в верхнем регистре
+// ВЕРХНИЙ РЕГИСТР показывает разработчикам, что не изменять. 
 </code></pre>
 
-<p>A constant can also be a <code>static readonly</code> property of a class.</p>
+<p>Константы могут также быть свойством класса <code>static readonly</code>.</p>
 
 <pre><code class="language-ts good">class Foo {
   private static readonly MY_SPECIAL_NUMBER = 5;
